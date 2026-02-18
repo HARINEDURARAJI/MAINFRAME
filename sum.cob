@@ -1,0 +1,19 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SUM-20.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 NUMBERS.
+          05 NUM PIC 9(3) OCCURS 20 TIMES.
+       01 I PIC 9(2).
+       01 TOTAL PIC 9(5) VALUE 0.
+
+       PROCEDURE DIVISION.
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 20
+               DISPLAY "ENTER NUMBER: "
+               ACCEPT NUM(I)
+               ADD NUM(I) TO TOTAL
+           END-PERFORM.
+
+           DISPLAY "TOTAL: " TOTAL.
+           STOP RUN.
