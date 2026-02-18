@@ -1,0 +1,20 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CELSIUS-TO-FAHRENHEIT.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       
+       01  CELSIUS        PIC 9(3)V9(2).
+       01  FAHRENHEIT     PIC 9(3)V9(2).
+
+       PROCEDURE DIVISION.
+       
+       MAIN-PARA.
+           DISPLAY "ENTER TEMPERATURE IN CELSIUS: ".
+           ACCEPT CELSIUS.
+           
+           COMPUTE FAHRENHEIT = (CELSIUS * 9 / 5) + 32.
+           
+           DISPLAY "TEMPERATURE IN FAHRENHEIT: " FAHRENHEIT.
+           
+           STOP RUN.
